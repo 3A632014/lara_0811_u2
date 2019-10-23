@@ -12,5 +12,11 @@
 */
 
 Route::get('/', function () {
-    return redirect('welcome');
+    //return 'welcome';
+    return view('welcome');
+    //return redirect('welcome');
+});
+
+Route::get('hello/{name?}',function($name = 'Everybody'){
+    return'Hello,'.$name;
 });
